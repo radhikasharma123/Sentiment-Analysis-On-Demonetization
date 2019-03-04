@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+    position: relative;
+    width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 40%;
+  left: 18%;
+  transform: translate(-20%, -50%);
+  -ms-transform: translate(-20%, -50%)
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 8px 16px;
+}
+</style>
+</head>
+<body>
+
+<h2>Developers of Sentiment Analysis On Demonetization Application</h2>
+
+<div class="container">
+  <img src="radhi.jpg" alt="Avatar" class="image" style="width:30%">
+  <div class="middle">
+    <div class="text">Radhika Sharma <p>Hey,I am Radhika Sharma. I have done the analysis and visualization part. Categorizing the text into negatives and positives and representing them in the form of graph is an important task. We have used Pig for analysis and Business Intelligence for visualization  </p></div>
+  </div>
+  </div><br>
+  <div class="container">
+  <img src="suguna.jpg" alt="Avatar" class="image" style="width:30%">
+  <div class="middle">
+    <div class="text"> Suguna<p> Hi, I am Suguna. I have done the front end part of this application. AngualrJS, Html, CSS technologies are used to create the front end of this application.</p></div>
+  </div><br>
+  </div>
+  <div class="container">
+  <img src="srujana.jpg" alt="Avatar" class="image" style="width:30%">
+  <div class="middle">
+    <div class="text">Srujana<p>Hello, I am Srujana. I have done the database connection of this application and also generating the files that need to analyzed was handled by me.  </p></div>
+  </div>
+                               
+</div>
+  
+</body>
+</html>

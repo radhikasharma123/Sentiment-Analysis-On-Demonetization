@@ -1,0 +1,181 @@
+<html>
+<head>
+<title>DEMONETIZATION</title>
+<style>
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color:goldenrod;
+    color: white;
+	font-weight: bold;
+	font-size: 21px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: goldenrod;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+.header img {
+  float: left;
+  width: 150px;
+  height: 120px;
+  background: #555;
+}
+.header h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+}
+</style>
+<script>
+function checknameEmpty()
+{
+var name=document.f1.name.value;  
+var status= false;
+if(name.length<1){  
+document.getElementById("nname").innerHTML= "Please enter your name";
+name.focus();
+status=false;
+}
+else{
+  document.getElementById("nname").innerHTML= "";
+}
+}
+function checkageEmpty()
+{
+  var age=document.f1.age1.value;   
+     if (isNaN(age) || age.length>2)  
+      {  
+        document.getElementById("numloc").innerHTML= "Please enter correct age";  
+        return false;  
+      }else{  
+   document.getElementById("numloc").innerHTML= ""; 
+  }  
+  
+}
+function checkoccupationEmpty()
+{    
+        
+        var occupation=document.f1.getElementById("ocp");
+        if (occupation.value == "") {
+            document.getElementById("occ").innerHTML= "Please select your occupation";  
+            return false;
+        }
+        return true;
+    }
+function checkopinionEmpty()
+{
+var op=document.f1.opinion.value;  
+var status= false;
+if(op.length<1){  
+document.getElementById("opn").innerHTML= "Please give your opinion";
+name.focus();
+status=false;
+}
+else{
+ document.getElementById("opn").innerHTML= "";
+}
+var name=document.f1.name.value;
+var age1=document.f1.age1.value;
+var occu=document.f1.occu.value;
+var state=document.f1.state.value;
+var opinion=document.f1.opinion.value;
+if(name.length<1 && age1.length<1 && occu.length<1 && op.length<1
+  {
+	  echo "Please fill all the fields";
+  }
+}
+</script>
+</head>
+<body>
+<div class="header">
+<img src="d.jpg">
+<h1 align="center"><u><font color="goldenrod" size="36">Sentiment Analysis On Demonetization</font></u></h1>
+</div>
+
+<div>
+  <form name="f1" method="post" action="3.php">
+    <label for="Name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name.." onBlur="checknameEmpty()" required>
+    <span id="nname" style="color:red"></span><br>
+	
+    <label for="age">Age</label>
+    <input type="text" id="age1" name="age1" placeholder="Your age.." onBlur="checkageEmpty()" required>
+	<span id="numloc" style="color:red"></span><br>
+    
+	<label for="occupation">Occupation</label>
+    <select id="ocp" name="occu" onBlur="checkoccupationEmpty()" required><span id="occ"></span><br>
+      <option value="Business">Business</option>
+      <option value="Employee">Employee</option>
+      <option value="Student">Student</option>
+	  <option value="Housewife">Housewife</option>
+	  <option value="Doctor">Doctor</option>
+	  <option value="Teacher">Teacher</option>
+	  <option value="Journalist">Journalist</option>
+	  <option value="Lawyer">Lawyer</option>
+	  <option value="Clerk">Clerk</option>
+	  <option value="Other">Other</option>
+    </select>
+	
+	<label for="state">State</label>
+    <select id="state" name="state" onBlur="checkstateEmpty()" required><span id="st"></span><br>
+      <option value="Andhra Pradesh">Andhra Pradesh</option>
+      <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+      <option value="Assam">Assam</option>
+	  <option value="Bihar">Bihar</option>
+	  <option value="Chhattisgarh">Chhattisgarh</option>
+	  <option value="Goa">Goa</option>
+	  <option value="Gujarat">Gujarat</option>
+	  <option value="Haryana">Haryana</option>
+	  <option value="Himachal Pradesh">Himachal Pradesh</option>
+	  <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+	  <option value="Jharkhand">Jharkhand</option>
+	  <option value="Karnataka">Karnataka</option>
+	  <option value="Kerala">Kerala</option>
+	  <option value="Madhya Pradesh">Madhya Pradesh</option>
+	  <option value="Maharashtra">Maharashtra</option>
+	  <option value="Manipur">Manipur</option>
+	  <option value="Meghalaya">Meghalaya</option>
+	  <option value="Mizoram">Mizoram</option>
+	  <option value="Nagaland">Nagaland</option>
+	  <option value="Orissa">Orissa</option>
+	  <option value="Punjab">Punjab</option>
+	  <option value="Rajasthan">Rajasthan</option>
+	  <option value="Sikkim">Sikkim</option>
+	  <option value="Tamil Nadu">Tamil Nadu</option>
+	  <option value="Telangana">Telangana</option>
+	  <option value="Tripura">Tripura</option>
+	  <option value="Uttar Pradesh">Uttar Pradesh</option>
+	  <option value="Uttarakhand">Uttarakhand</option>
+	  <option value="West Bengal">West Bengal</option>
+	   
+	  
+    </select>
+	<label for="comment">Opinion</label>
+    <input type="text" id="opinion" name="opinion" placeholder="Please enter your opinion on Demonetization.." onBlur="checkopinionEmpty()" required><span id="opn" style="color:red"></span><br>
+  
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>
